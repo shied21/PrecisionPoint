@@ -1,0 +1,57 @@
+.partner-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 400px;
+  cursor: pointer;
+}
+
+.partner-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Remove hover effect */
+/* .partner-card:hover .partner-card-inner {
+  transform: rotateY(180deg);
+} */
+
+.partner-card-front, .partner-card-back {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.partner-card-back {
+  transform: rotateY(180deg);
+  background-color: #f8f8f8;
+}
+
+/* .partner-logo {
+  width: auto;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+} */
+
+.partner-description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}

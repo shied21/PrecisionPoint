@@ -1,0 +1,67 @@
+.areas-waterproofing-property {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 -1rem; /* Compensate for slide item margin */
+}
+
+.slider-track {
+  display: flex;
+  width: calc(100%); /* Accommodates extended slides */
+  transform: translateX(0);
+  will-change: transform;
+}
+
+.slide-item {
+  flex: 0 0 calc(40% - 2rem); /* Shows 2 full items plus part of third */
+  margin: 0 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slide-item:hover {
+  transform: translateY(-5px);
+}
+
+.slide-item img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+.slide-item div {
+  position: absolute;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+  color: white;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .slide-item {
+    flex: 0 0 calc(50% - 2rem); /* Show 2 items */
+  }
+}
+
+@media (max-width: 640px) {
+  .slide-item {
+    flex: 0 0 calc(85% - 2rem); /* Show 1 item plus peek */
+  }
+}
